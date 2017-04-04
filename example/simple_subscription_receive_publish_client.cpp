@@ -8,7 +8,7 @@ int main() {
     broker_address.bytes[2] = 0;
     broker_address.bytes[3] = 1;
 
-    uint16_t port = ntohs(8888);
+    uint16_t port = ntohs(1883);
     memcpy(&broker_address.bytes[4], &port, sizeof(uint16_t));
 
     LinuxUdpClientFake fourthclient;
